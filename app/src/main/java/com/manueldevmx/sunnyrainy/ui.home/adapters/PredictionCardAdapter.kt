@@ -1,4 +1,4 @@
-package com.manueldevmx.sunnyrainy.ui.adapters
+package com.manueldevmx.sunnyrainy.home.adapters
 
 import android.content.Context
 import android.view.LayoutInflater

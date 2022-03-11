@@ -1,4 +1,4 @@
-package com.manueldevmx.sunnyrainy.ui.fragments
+package com.manueldevmx.sunnyrainy.home.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,7 +10,7 @@ import coil.load
 import com.manueldevmx.sunnyrainy.databinding.FragmentHomeBinding
 import com.manueldevmx.sunnyrainy.network.weather.Current
 import com.manueldevmx.sunnyrainy.network.weather.OneCallEntity
-import com.manueldevmx.sunnyrainy.ui.adapters.PredictionCardAdapter
+import com.manueldevmx.sunnyrainy.home.adapters.PredictionCardAdapter
 import java.text.SimpleDateFormat
 import java.util.*
 

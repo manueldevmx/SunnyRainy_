@@ -6,25 +6,25 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.location.Location
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.Settings
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.PermissionChecker
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.lifecycleScope
-import androidx.viewbinding.BuildConfig
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
+import com.manueldevmx.sunnyrainy.BuildConfig.APPLICATION_ID
 import com.manueldevmx.sunnyrainy.databinding.ActivityMainBinding
+import com.manueldevmx.sunnyrainy.home.fragments.HomeErrorFragment
+import com.manueldevmx.sunnyrainy.home.fragments.HomeFragment
+import com.manueldevmx.sunnyrainy.home.fragments.HomeLoadingFragment
 import com.manueldevmx.sunnyrainy.network.city.CityEntity
 import com.manueldevmx.sunnyrainy.network.city.CityService
 import com.manueldevmx.sunnyrainy.network.weather.OneCallEntity
 import com.manueldevmx.sunnyrainy.network.weather.WeatherService
-import com.manueldevmx.sunnyrainy.ui.fragments.HomeErrorFragment
-import com.manueldevmx.sunnyrainy.ui.fragments.HomeFragment
-import com.manueldevmx.sunnyrainy.ui.fragments.HomeLoadingFragment
 import com.manueldevmx.sunnyrainy.utils.checkForInternet
 import com.manueldevmx.sunnyrainy.utils.showSnack
 import kotlinx.coroutines.Dispatchers
@@ -34,9 +34,10 @@ import retrofit2.HttpException
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class MainActivity : AppCompatActivity() {
+
+
+class MainActivity(private val REQUEST_PERMISSIONS_REQUEST_CODE: Int = 34) : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    private val REQUEST_PERMISSIONS_REQUEST_CODE = 34
     private var latitude = ""
     private var longitude = ""
 
@@ -113,7 +114,7 @@ class MainActivity : AppCompatActivity() {
 
     private suspend fun getWeatherOneCall(latitude: String, longitude: String): OneCallEntity? = withContext(
         Dispatchers.IO){
-            var result: OneCallEntity? = null
+        var result: OneCallEntity? = null
         try {
             val retrofit: Retrofit = Retrofit.Builder()
                 .baseUrl(getString(R.string.open_weather_api_url))
@@ -137,9 +138,7 @@ class MainActivity : AppCompatActivity() {
 
     private suspend fun getCityNameByLatLng(latitude: String, longitude: String): CityEntity? = withContext(Dispatchers.IO){
         var result: CityEntity? = null
-        try { val retrofit: Retrofit = Retrofit.Builder().baseUrl(getString(R.string.open_weather_api_url))
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
+            try { val retrofit: Retrofit = Retrofit.Builder().baseUrl(getString(R.string.open_weather_api_url)).addConverterFactory(GsonConverterFactory.create()).build()
             val service: CityService = retrofit.create(CityService::class.java)
             result = service.getCitiesByLatLng(
                 latitude,
@@ -218,9 +217,8 @@ class MainActivity : AppCompatActivity() {
                         getString(R.string.permission_denied),
                         getString(R.string.open_settings)
                     ) {
-                        Intent().apply{
-                            action = Settings.ACTION_APPLICATION_DETAILS_SETTINGS
-                            data = Uri.fromParts("package", BuildConfig.APPLICATION_ID, null)
+                        Intent().apply{ action = Settings.ACTION_APPLICATION_DETAILS_SETTINGS
+                            data = Uri.fromParts("package", APPLICATION_ID, null)
                             flags = Intent.FLAG_ACTIVITY_NEW_TASK
                         }
                     }

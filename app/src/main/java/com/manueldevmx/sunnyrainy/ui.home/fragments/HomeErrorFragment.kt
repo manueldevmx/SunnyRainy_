@@ -1,4 +1,4 @@
-package com.manueldevmx.sunnyrainy.ui.fragments
+package com.manueldevmx.sunnyrainy.home.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater

@@ -1,4 +1,4 @@
-package com.manueldevmx.sunnyrainy
+package com.manueldevmx.sunnyrainy.mainModule.view
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -17,16 +17,17 @@ import androidx.lifecycle.lifecycleScope
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.manueldevmx.sunnyrainy.BuildConfig.APPLICATION_ID
+import com.manueldevmx.sunnyrainy.R
 import com.manueldevmx.sunnyrainy.databinding.ActivityMainBinding
 import com.manueldevmx.sunnyrainy.home.fragments.HomeErrorFragment
 import com.manueldevmx.sunnyrainy.home.fragments.HomeFragment
 import com.manueldevmx.sunnyrainy.home.fragments.HomeLoadingFragment
-import com.manueldevmx.sunnyrainy.network.city.CityEntity
-import com.manueldevmx.sunnyrainy.network.city.CityService
-import com.manueldevmx.sunnyrainy.network.weather.OneCallEntity
-import com.manueldevmx.sunnyrainy.network.weather.WeatherService
-import com.manueldevmx.sunnyrainy.utils.checkForInternet
-import com.manueldevmx.sunnyrainy.utils.showSnack
+import com.manueldevmx.sunnyrainy.mainModule.model.city.CityEntity
+import com.manueldevmx.sunnyrainy.mainModule.model.city.CityService
+import com.manueldevmx.sunnyrainy.mainModule.model.weather.OneCallEntity
+import com.manueldevmx.sunnyrainy.mainModule.model.weather.WeatherService
+import com.manueldevmx.sunnyrainy.mainModule.viewModel.utils.checkForInternet
+import com.manueldevmx.sunnyrainy.mainModule.viewModel.utils.showSnack
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext

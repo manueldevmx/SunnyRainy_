@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/main_header_selector"
     android:padding="9dp"
-    tools:context=".MainActivity">
+    tools:context=".mainModule.view.MainActivity">
 
     <ImageView
         android:id="@+id/image_world_map"

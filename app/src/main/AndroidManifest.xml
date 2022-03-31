@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SunnyRainy">
         <activity
-            android:name=".MainActivity"
+            android:name=".mainModule.view.MainActivity"
             android:theme="@style/Theme.Weather.Start"
             android:exported="true">
             <intent-filter>

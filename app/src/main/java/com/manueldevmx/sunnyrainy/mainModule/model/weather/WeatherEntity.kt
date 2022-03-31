@@ -1,4 +1,4 @@
-package com.manueldevmx.sunnyrainy.network.weather
+package com.manueldevmx.sunnyrainy.mainModule.model.weather
 
 import java.io.Serializable
 

@@ -1,4 +1,4 @@
-package com.manueldevmx.sunnyrainy.network.city
+package com.manueldevmx.sunnyrainy.mainModule.model.city
 
 import java.io.Serializable
 

@@ -1,4 +1,4 @@
-package com.manueldevmx.sunnyrainy.network.weather
+package com.manueldevmx.sunnyrainy.mainModule.model.weather
 
 import retrofit2.http.GET
 import retrofit2.http.Query

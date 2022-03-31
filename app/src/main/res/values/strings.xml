@@ -5,7 +5,7 @@
     <string name="open_weather_api_url">https://api.openweathermap.org/</string>
     <string name="metric_units">metric</string>
     <string name="latin_spanish_language_code">sp</string>
-    <string name="api_key">433577ba8cf6b5fbcd84aba2ba22b071</string>
+    <string name="api_key">d4a5ce5237bddb178700588ec53e0f9d</string>
     <string name="location_permission_required">Se necesita permiso de ubicacion</string>
     <string name="ok">OK</string>
     <string name="location_request_indispensable">El permiso de ubicacion es indispensable</string>

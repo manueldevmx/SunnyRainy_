@@ -8,8 +8,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import coil.load
 import com.manueldevmx.sunnyrainy.databinding.FragmentHomeBinding
-import com.manueldevmx.sunnyrainy.network.weather.Current
-import com.manueldevmx.sunnyrainy.network.weather.OneCallEntity
+import com.manueldevmx.sunnyrainy.mainModule.model.weather.Current
+import com.manueldevmx.sunnyrainy.mainModule.model.weather.OneCallEntity
 import com.manueldevmx.sunnyrainy.home.adapters.PredictionCardAdapter
 import java.text.SimpleDateFormat
 import java.util.*

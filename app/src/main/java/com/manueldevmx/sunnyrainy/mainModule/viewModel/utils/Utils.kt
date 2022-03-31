@@ -1,4 +1,4 @@
-package com.manueldevmx.sunnyrainy.utils
+package com.manueldevmx.sunnyrainy.mainModule.viewModel.utils
 
 import android.content.Context
 import android.net.ConnectivityManager

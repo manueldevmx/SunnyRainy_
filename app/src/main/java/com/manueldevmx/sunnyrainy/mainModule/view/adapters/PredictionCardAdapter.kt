@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.manueldevmx.sunnyrainy.R
-import com.manueldevmx.sunnyrainy.network.weather.Current
+import com.manueldevmx.sunnyrainy.mainModule.model.weather.Current
 import java.text.SimpleDateFormat
 import java.util.*
 

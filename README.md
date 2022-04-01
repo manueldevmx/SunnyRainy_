@@ -30,3 +30,4 @@ App móvil que funciona con la API del sitio https://openweathermap.org/
     //En Android 12 no es necesaria
     implementation 'androidx.core:core-splashscreen:1.0.0-beta01'
 ```
+Dev: Manuel De la Cruz
